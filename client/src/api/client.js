@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   // Ensure this matches your server port
-  baseURL: 'http://localhost:5000/api'
+  baseURL: 'https://anuprerna-task-1-7kfz.vercel.app/api'
 });
 
 /**
