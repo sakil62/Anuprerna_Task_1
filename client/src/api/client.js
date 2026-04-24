@@ -1,13 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // Ensure this matches your server port
-  baseURL: 'http://localhost:5000/api'
+
+  baseURL: 'https://anuprerna-task-1.onrender.com/api'
 });
 
-/**
- * Universal handler to extract data or log detailed errors
- */
 const handle = async (req) => {
   try {
     const res = await req;
@@ -23,16 +20,9 @@ export const getStates = () => handle(api.get('/states'));
 
 export const getDates = () => handle(api.get('/dates'));
 
-/**
- * Fetches data for a single state. 
- * Note: 'from' and 'to' should be in YYYY-MM-DD format (standard for <input type="date">)
- */
 export const getState = (name, from, to) =>
   handle(api.get(`/state/${encodeURIComponent(name)}`, { params: { from, to } }));
 
-/**
- * Fetches comparison data for multiple states.
- */
 export const compareStates = (states, from, to) => {
   if (!states || states.length === 0) return Promise.resolve([]);
 
