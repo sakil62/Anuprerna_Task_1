@@ -2,9 +2,9 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const path = require('path');
 
-const CONFIRMED_CASES_BASE = path.join(__dirname, '../data/COVID-19-Datasets/India Statewise Confirmed Cases');
-const DEATH_CASES_BASE = path.join(__dirname, '../data/COVID-19-Datasets/India Statewise Death Cases');
-const RECOVERY_CASES_BASE = path.join(__dirname, '../data/COVID-19-Datasets/India Statewise Recovery Cases');
+const CONFIRMED_CASES_BASE = path.join(__dirname, '../data/Datasets/India Statewise Confirmed Cases');
+const DEATH_CASES_BASE = path.join(__dirname, '../data/Datasets/India Statewise Death Cases');
+const RECOVERY_CASES_BASE = path.join(__dirname, '../data/Datasets/India Statewise Recovery Cases');
 
 function parseCSV(base, filename) {
   return new Promise((resolve, reject) => {
