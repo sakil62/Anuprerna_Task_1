@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
 
-  baseURL: 'https://anuprerna-task-1.onrender.com/api'
+  baseURL: 'https://anuprerna-task-1-tpbk.vercel.app/api'
 });
 
 const handle = async (req) => {
