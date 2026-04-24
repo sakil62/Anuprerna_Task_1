@@ -21,7 +21,7 @@ async function loadAll() {
   const [confirmed, deaths, recovered] = await Promise.all([
     parseCSV(CONFIRMED_CASES_BASE, 'COVID19_INDIA_STATEWISE_TIME_SERIES_CONFIRMED.csv'),
     parseCSV(DEATH_CASES_BASE, 'COVID19_INDIA_STATEWISE_TIME_SERIES_DEATH.csv'),
-    parseCSV(RECOVERY_CASES_BASE, 'COVID19_INDIA_STATEWISE_TIME_SERIES_RECOVERy.csv'),
+    parseCSV(RECOVERY_CASES_BASE, 'COVID19_INDIA_STATEWISE_TIME_SERIES_RECOVERY.csv'),
   ]);
 
   return { confirmed, deaths, recovered };
